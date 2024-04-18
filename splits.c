@@ -2,17 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int ac, char **av)
+int main(int ac __attribute__((unused)), char **av)
 {
 	char *str1, *str2, *token, *subtoken;
 	char *saveptr1, *saveptr2;
 	int j;
-
-	if (ac != 2)
-	{
-		fprintf(stderr, "Usage: %s string delim subdelim\n", av[0]);
-		exit(EXIT_FAILURE);
-	}
 
 	for (j = 1, str1 = av[1]; ; j++, str1 = NULL)
 	{
